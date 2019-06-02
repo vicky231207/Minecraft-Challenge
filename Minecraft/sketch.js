@@ -2,6 +2,7 @@ function setup() {
   createCanvas(400, 400,WEBGL); 
 } 
 function draw() { 
+  console.log("hallo victor");
   background(0,200,255); 
   translate(-200,-200,-200); 
   for(let i = 0;i < 10;i++) { 
