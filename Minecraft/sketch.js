@@ -1,8 +1,9 @@
 let pos;
-
+let scl = 40;
 function setup() { 
   createCanvas(600, 400,WEBGL); 
   pos = createVector();
+  frameRate(5);
 } 
 function draw() { 
   background(0,200,255); 
@@ -10,28 +11,28 @@ function draw() {
   pos.y = 240
   if(keyIsPressed) {
    if(key == 'a') {
-     pos.x -= 1;
+     pos.x -= scl;
    }
     if(key == 'd') {
-     pos.x += 1; 
+     pos.x += scl; 
     }
     if(key == 'w') {
-     pos.z -= 1; 
+     pos.z -= scl; 
     }
     if(key == 's') {
-      pos.z += 1;
+      pos.z += scl;
     }
   }
   push();
   translate(pos);
-  box(40);
+  box(scl);
   pop();
   for(let i = 0;i < 10;i++) { 
     for(let j = 0;j < 3;j++) { 
       for(let k = 0;k < 10;k++) { 
         push(); 
-        translate(i*40,j*40+280,k*40); 
-        box(40); 
+        translate(i*scl,j*scl+280,k*scl); 
+        box(scl); 
         pop(); 
       } 
     } 
